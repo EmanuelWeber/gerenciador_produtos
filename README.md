@@ -1,30 +1,94 @@
-Projeto de Gerenciador de Produtos usando Angular no frontend e Yii2 no Backend
-com Mysql
+# 📦 Gerenciador de Produtos  
+Projeto full-stack com **Angular (Frontend)**, **Yii2 (Backend)** e **MySQL**.
 
-Video demonstrando o projeto: https://youtu.be/q3D_EfV2Zy0
+🎥 **Demonstração em vídeo**: [Assista aqui](https://youtu.be/q3D_EfV2Zy0)
 
-Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
+---
 
-Node.js (versão 16 ou superior)
+## 🛠️ Pré-requisitos
 
-Angular CLI (versão 17 ou superior)
+Antes de começar, verifique se você tem os seguintes itens instalados na sua máquina:
 
-PHP (versão 8.0 ou superior)
+- ✅ [Node.js](https://nodejs.org/) (versão **16** ou superior)  
+- ✅ [Angular CLI](https://angular.io/cli) (versão **17** ou superior)  
+- ✅ [PHP](https://www.php.net/) (versão **8.0** ou superior)  
+- ✅ [Composer](https://getcomposer.org/) (gerenciador de dependências do PHP)  
+- ✅ [MySQL](https://www.mysql.com/) ou outro banco de dados compatível
 
-Composer (gerenciador de dependências PHP)
+---
 
-MySQL ou outro sistema de gerenciamento de banco de dados compatível
+## 🚀 Como rodar o projeto
 
-Passo a passo de como rodar o projeto:
+### 🔹 1. Frontend (Angular)
 
-Frontend: Na pasta do frontend, instalar as dependências do projeto com o comando: "npm install".
+1. Acesse a pasta do frontend:
+   ```bash
+   cd Frontend/
+   ```
 
-Em seguida, iniciar o angular com o comando: "ng serve".
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-Backend: Na pasta do backend, instalar as dependências do projeto com o Composer com o comando: "composer install".
+3. Inicie o servidor Angular:
+   ```bash
+   ng serve
+   ```
 
-Ajustar as informações do seu banco de dados no arquivo "db.php", como o username e senha.
+   > O projeto estará disponível em `http://localhost:4200/`
 
-Executar as migrações para criar o banco de dados e as tabelas com o comando: "php yii migrate".
+---
 
-Por fim, iniciar o servidor PHP para rodar a API na porta 8080 com o comando: "php yii serve".
+### 🔸 2. Backend (Yii2)
+
+1. Acesse a pasta do backend:
+   ```bash
+   cd Backend/
+   ```
+
+2. Instale as dependências com o Composer:
+   ```bash
+   composer install
+   ```
+
+3. Configure o banco de dados:
+
+   Edite o arquivo `config/db.php` com suas credenciais do MySQL:
+
+   ```php
+   return [
+       'class' => 'yii\db\Connection',
+       'dsn' => 'mysql:host=localhost;dbname=nome_do_banco',
+       'username' => 'seu_usuario',
+       'password' => 'sua_senha',
+       'charset' => 'utf8',
+   ];
+   ```
+
+4. Execute as migrações para criar as tabelas no banco:
+   ```bash
+   php yii migrate
+   ```
+
+5. Inicie o servidor PHP para rodar a API:
+   ```bash
+   php yii serve
+   ```
+
+   > A API estará disponível em `http://localhost:8080/`
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+/Backend   → API em Yii2 (PHP)
+/Frontend  → Interface em Angular
+```
+
+---
+
+## 📬 Contato
+
+Em caso de dúvidas ou sugestões, fique à vontade para entrar em contato!
