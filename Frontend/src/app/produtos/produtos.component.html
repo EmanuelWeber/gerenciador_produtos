@@ -1,0 +1,56 @@
+<div *ngIf="mensagem" class="alert-top">
+  <span class="alert-text">{{ mensagem }}</span>
+  <button class="alert-close" (click)="fecharMensagem()">✕</button>
+</div>
+
+<div #GradeProduto class="crud-container" *ngIf="!editando">
+  <h2 class="crud-title">Gerenciar Produtos</h2>
+
+  <table class="product-table">
+    <thead>
+      <tr class="header-controls">
+        <th [attr.colspan]="5" class="controls-cell">
+          <div class="controls-container">
+            <div class="filter-controls">
+              <input type="text" placeholder="Filtrar por nome…" [(ngModel)]="filtro" class="filter-input"
+                (keyup.enter)="filtrar()" />
+              <button (click)="filtrar()" class="btn btn-filter">Filtrar</button>
+            </div>
+            <div class="add-button">
+              <button (click)="adicionarProduto()" class="btn btn-primary">Adicionar</button>
+            </div>
+          </div>
+        </th>
+      </tr>
+
+      <tr>
+        <th>Nome</th>
+        <th>Quantidade</th>
+        <th>Dt. Criação</th>
+        <th>Categoria</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let p of produtos">
+        <td>{{ p.nome }}</td>
+        <td>{{ p.quantidade }}</td>
+        <td>{{ p.criacao_formatada }}</td>
+        <td>{{ obterNomeCategoria(p.idCategoria)}}</td>
+        <td>
+          <div class="action-buttons">
+            <button (click)="alterar(p)" class="btn btn-edit">Editar</button>
+            <button (click)="remover(p.id!)" class="btn btn-delete">Excluir</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div #AdicionarOuEditarProduto *ngIf="editando">
+  <app-adicionar-produto [(produtoSelecionado)]="produtoSelecionado" [categorias]="categorias"
+    (alterouProduto)="produtos.push($event); editando =  false" (notificarMensagem)="tratarNotificacaoMensagem($event)"
+    (voltarParaTabela)="editando = false"></app-adicionar-produto>
+</div>

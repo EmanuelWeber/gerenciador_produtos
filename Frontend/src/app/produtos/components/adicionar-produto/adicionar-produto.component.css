@@ -1,0 +1,89 @@
+.form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #f7f9fc;
+  border: 1px solid #ccd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  color: #1a237e;
+}
+
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.form-group select option[disabled] {
+  color: #888;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn.btn-primary {
+  padding: 10px 20px;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #0d47a1;
+}
+
+.btn-back {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 16px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  color: #333;
+  font-size: 1.5rem;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+.btn-back:hover {
+  background-color: #bdbdbd;
+}

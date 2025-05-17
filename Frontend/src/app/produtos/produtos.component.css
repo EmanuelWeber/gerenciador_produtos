@@ -1,0 +1,128 @@
+.crud-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.crud-title {
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: #333;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.product-table th,
+.product-table td {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.product-table thead {
+  background-color: #f1f1f1;
+}
+
+.product-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.header-controls {
+  background-color: #e9e9e9;
+}
+
+.controls-cell {
+  padding: 16px;
+}
+
+.btn {
+  padding: 8px 12px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-filter {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn-edit {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.filter-input {
+  padding: 8px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-controls {
+  display: flex;
+  align-items: center;
+}
+
+.add-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.alert-top {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1a73e8;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.alert-text {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.alert-close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 8px;
+}
